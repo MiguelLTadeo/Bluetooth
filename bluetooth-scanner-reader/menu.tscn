@@ -45,5 +45,10 @@ layout_mode = 2
 text = "LEITURA: "
 horizontal_alignment = 1
 
+[node name="Label_Padrao" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [connection signal="pressed" from="VBoxContainer/CONECTAR" to="." method="_on_conectar_esp_32_miguel_pressed"]
 [connection signal="pressed" from="VBoxContainer/DESCONECTAR" to="." method="_on_desconectar_pressed"]

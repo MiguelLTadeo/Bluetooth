@@ -1,7 +1,7 @@
 extends Node
 
 var bluetooth_manager: BluetoothManager
-var target_device_name = "ESP32_MPU_BLE"
+@export var target_device_name: String = "teste_blu"
 var device: BleDevice
 
 const UUID_SERVICO = "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
@@ -56,7 +56,7 @@ func _on_data_update(char_uuid: String, data: PackedByteArray):
 	if char_uuid.to_lower() == UUID_CHAR.to_lower():
 		var leitura = data.get_string_from_utf8()
 		
-		BluetoothDirect.posicao = leitura
+		Bluetooth.posicao = leitura
 		
 		print("Dado recebido: ", leitura)
 
