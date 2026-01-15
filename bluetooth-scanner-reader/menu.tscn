@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbxmoe1kflaje"]
+
+[ext_resource type="Script" uid="uid://crgvmn7g3n4fi" path="res://menu.gd" id="1_lti8b"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lti8b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -45.0
+offset_right = 46.5
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ESCANEAR" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "ESCANEAR"
+
+[node name="CONECTAR" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "CONECTAR"
+
+[node name="SERVICES" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "LISTAR SERVIÇOS"
+
+[connection signal="item_selected" from="VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="VBoxContainer/ESCANEAR" to="." method="_on_escanear_pressed"]
+[connection signal="pressed" from="VBoxContainer/CONECTAR" to="." method="_on_conectar_pressed"]
+[connection signal="pressed" from="VBoxContainer/SERVICES" to="." method="_on_services_pressed"]
