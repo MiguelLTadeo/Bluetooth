@@ -17,9 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-BluetoothScan="*res://BluetoothScan.gd"
-BluetoothLeitura="*res://BluetoothLeitura.gd"
-BluetoothServices="*res://BluetoothServices.gd"
+BluetoothDirect="*res://BluetoothDirect.gd"
 
 [rendering]
 

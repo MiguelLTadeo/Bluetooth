@@ -25,22 +25,25 @@ offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+text = "DIGITE O NOME DO DISPOSITIVO"
 
-[node name="ESCANEAR" type="Button" parent="VBoxContainer"]
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
-text = "ESCANEAR"
 
 [node name="CONECTAR" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "CONECTAR"
 
-[node name="SERVICES" type="Button" parent="VBoxContainer"]
+[node name="DESCONECTAR" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "LISTAR SERVIÇOS"
+text = "DESCONECTAR"
 
-[connection signal="item_selected" from="VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
-[connection signal="pressed" from="VBoxContainer/ESCANEAR" to="." method="_on_escanear_pressed"]
-[connection signal="pressed" from="VBoxContainer/CONECTAR" to="." method="_on_conectar_pressed"]
-[connection signal="pressed" from="VBoxContainer/SERVICES" to="." method="_on_services_pressed"]
+[node name="LEITURA" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "LEITURA: "
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/CONECTAR" to="." method="_on_conectar_esp_32_miguel_pressed"]
+[connection signal="pressed" from="VBoxContainer/DESCONECTAR" to="." method="_on_desconectar_pressed"]
